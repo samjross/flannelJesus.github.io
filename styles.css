@@ -1,0 +1,23 @@
+div h2:nth-last-child(2)
+{
+    background-color: blue;
+    color:white;
+}
+
+div
+{
+    border:dashed;
+    border-color:grey;
+    border-width: 1px;
+    margin-bottom:20px;
+}
+
+.test2 h1:nth-last-child(1)
+{
+    color:green;
+}
+
+.test1 h1:nth-last-child(4)
+{
+    color:blue;
+}
