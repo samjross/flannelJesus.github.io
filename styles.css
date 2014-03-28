@@ -1,21 +1,20 @@
 body, html
 {
-    background-color: #aaa;
+    background-color: #4d4d4d;
     color:white;
     margin:0px;
     padding:0px;
     height:100%;
-    font-family:sans-serif
+    font-family: "Open sans", sans-serif;
 }
 
 nav
 {
-    background-color: blue;
-    width:290px;
+    background-color: #444;
     height:100%;
     float: left;
     margin:0px;
-    padding:50px 0px 0px 10px;
+    padding:50px 80px 0px 10px;
     position: fixed;
     top: 0px;
     left: 0px;
@@ -28,6 +27,7 @@ nav>ul, nav>h1
     font-size:16px;
     padding-left:40px;
     font-weight:100;
+    margin-bottom: 50px;
 }
 
 nav>ul>li
@@ -35,13 +35,25 @@ nav>ul>li
     margin-bottom:2px
 }
 
+article
+{
+    margin:50px 0px 0px 300px;
+    padding-right: 30px;
+    max-width: 700px;
+    min-width: 300px;
+}
+
+@media all and (min-height: 365px)
+{
+    nav>ul:nth-of-type(2)
+    {
+        bottom:50px;
+        position:absolute;
+    }
+}
+
 nav>ul>li>a
 {
     color:inherit;
     text-decoration: inherit;
-}
-
-nav>h1
-{
-    padding-bottom:50px
 }
