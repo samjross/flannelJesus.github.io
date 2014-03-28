@@ -1,23 +1,47 @@
-div h2:nth-last-child(2)
+body, html
+{
+    background-color: #aaa;
+    color:white;
+    margin:0px;
+    padding:0px;
+    height:100%;
+    font-family:sans-serif
+}
+
+nav
 {
     background-color: blue;
-    color:white;
+    width:290px;
+    height:100%;
+    float: left;
+    margin:0px;
+    padding:50px 0px 0px 10px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
 }
 
-div
+nav>ul, nav>h1
 {
-    border:dashed;
-    border-color:grey;
-    border-width: 1px;
-    margin-bottom:20px;
+    margin:0;
+    list-style-type: none;
+    font-size:16px;
+    padding-left:40px;
+    font-weight:100;
 }
 
-.test2 h1:nth-last-child(1)
+nav>ul>li
 {
-    color:green;
+    margin-bottom:2px
 }
 
-.test1 h1:nth-last-child(4)
+nav>ul>li>a
 {
-    color:blue;
+    color:inherit;
+    text-decoration: inherit;
+}
+
+nav>h1
+{
+    padding-bottom:50px
 }
