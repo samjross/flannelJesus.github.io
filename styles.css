@@ -1,16 +1,22 @@
 @font-face {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
-  src: local("Open Sans"), local("OpenSans"), url("http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff") format("woff");
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
 }
-
 @font-face {
-  font-family: "Open Sans";
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/k3k702ZOKiLJc3WVjuplzHhCUOGz7vYGh680lGh-uXM.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
   font-style: italic;
   font-weight: 400;
-  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("http://themes.googleusercontent.com/static/fonts/opensans/v8/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff") format("woff");
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/xjAJXh38I15wypJXxuGMBobN6UDyHWBl620a-IRfuBk.woff) format('woff');
 }
+
 
 body, html
 {
@@ -70,8 +76,8 @@ article>h2
     font-weight: 100
 }
 
-@media all and (min-height: 365px)
-{
+@media all and (min-height: 365px){
+
     nav>ul:nth-of-type(2)
     {
         bottom:50px;
@@ -89,4 +95,14 @@ a
 {
     color:inherit;
     text-decoration: underline;
+}
+
+@media all and (max-width : 1050px) {
+  nav h1 { padding-left: 15px;display:inline-block; float:left; margin-bottom:10px }
+  nav {  margin-top:0px; min-width:555px; position:absolute; display:inline-block; width:100%; padding: 10px 40px 0px 15px;  height:auto; }
+  nav>ul { padding-right:35px;margin:50; margin-bottom:0px; display:inline-block; float:right; }
+  nav ul li { display:inline-block; margin-right:10px;}
+  article { margin-left:25px; margin-top: 75px; min-width:500px}
+  nav>ul:nth-of-type(2) { display:none; }
+  object, video, div.video-wrapper, div.player { width:100%; max-width:100% !important; }
 }
