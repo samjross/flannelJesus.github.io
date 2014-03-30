@@ -58,6 +58,11 @@ article h2
     margin-bottom: 0px;
 }
 
+article>p:last-child>em>a
+{
+    
+}
+
 nav>ul:nth-of-type(2)
 {
         bottom:50px;
