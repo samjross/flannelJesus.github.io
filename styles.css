@@ -100,10 +100,6 @@ ul.exp
     max-width: 500px;
 }
 
-
-
-
-
 blockquote
 {
     font-style: italic;
@@ -128,7 +124,6 @@ h4
 }
 
 ul.exp time { color:#C4C4C4; font-style: italic; margin-left: 20px}
-
 
 @media all and (min-width : 763px){
     article { text-align: justify}
