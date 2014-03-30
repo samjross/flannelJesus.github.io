@@ -58,9 +58,10 @@ article h2
     margin-bottom: 0px;
 }
 
-article>p:last-child>em>a
+article>p.view
 {
-    
+    text-align: center;
+    margin-top: 30px
 }
 
 nav>ul:nth-of-type(2)
