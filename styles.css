@@ -18,6 +18,7 @@ nav
     position: fixed;
     top: 0px;
     left: 0px;
+    min-height:370px;
 }
 
 nav>ul, nav>h1
@@ -57,13 +58,10 @@ article h2
     margin-bottom: 0px;
 }
 
-@media all and (min-height: 365px){
-
-    nav>ul:nth-of-type(2)
-    {
+nav>ul:nth-of-type(2)
+{
         bottom:50px;
         position:absolute;
-    }
 }
 
 nav a
@@ -104,10 +102,9 @@ blockquote
 {
     font-style: italic;
     border-left: 10px solid #444;
-    padding: 5px 15px 5px 10px;
-    margin: 20px 26px 20px 16px;
-    border-radius: 8px;
-    background-color: #555
+    padding-left:10px;
+    margin-left:20px;
+    margin-right:25px
 }
 
 blockquote p
@@ -125,6 +122,7 @@ h4
 
 ul.exp time { color:#C4C4C4; font-style: italic; margin-left: 20px}
 
+
 @media all and (min-width : 763px){
     article { text-align: justify}
     ul.exp time { float:right; margin-left: none}
@@ -132,7 +130,7 @@ ul.exp time { color:#C4C4C4; font-style: italic; margin-left: 20px}
 
 @media all and (max-width : 1050px) {
   nav h1 { padding-left: 15px;display:inline-block; float:left; margin-bottom:10px }
-  nav {  margin-top:0px; min-width:300px; position:absolute; display:inline-block; width:100%; padding: 10px 40px 0px 15px;  height:auto; }
+  nav {  margin-top:0px; min-width:300px; position:absolute; display:inline-block; width:100%; padding: 10px 40px 0px 15px;  height:auto; min-height:0px}
   nav>ul { padding-right:35px;margin:50; margin-bottom:0px; display:inline-block; float:right; }
   nav ul li { display:inline-block; margin-right:10px;}
   article { margin-left:25px; margin-top: 75px}
