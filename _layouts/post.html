@@ -3,6 +3,10 @@
 
 {% include header.html %}
 
+<time>{{  page.date| date_to_string }}</time>
+<h2>{{ page.title }}</h2>
+<h4>{{page.subtitle}}</h4>
+
 {{ content }}
 
 {% include footer.html %}
