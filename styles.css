@@ -40,13 +40,13 @@ article
     margin:40px 0px 50px 300px;
     padding-right: 30px;
     max-width: 700px;
-    min-width: 300px;
 }
 
 article>time:first-child
 {
     float:right;
     margin-top:12px;
+    margin-left:10px;
     color:#C4C4C4;
 }
 
@@ -141,10 +141,10 @@ code
 
 @media all and (max-width : 1050px) {
   nav h1 { padding-left: 15px;display:inline-block; float:left; margin-bottom:10px }
-  nav {  margin-top:0px; min-width:500px; position:absolute; display:inline-block; width:100%; padding: 10px 40px 0px 15px;  height:auto; }
+  nav {  margin-top:0px; min-width:300px; position:absolute; display:inline-block; width:100%; padding: 10px 40px 0px 15px;  height:auto; }
   nav>ul { padding-right:35px;margin:50; margin-bottom:0px; display:inline-block; float:right; }
   nav ul li { display:inline-block; margin-right:10px;}
-  article { margin-left:25px; margin-top: 75px; min-width:445px}
+  article { margin-left:25px; margin-top: 75px}
   nav>ul:nth-of-type(2) { display:none; }
   object, video, div.video-wrapper, div.player { width:100%; max-width:100% !important; }
   nav>ul:first-of-type>li:nth-child(4) {display:none;}
