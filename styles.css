@@ -98,8 +98,15 @@ blockquote
 {
     font-style: italic;
     border-left: 10px solid #444;
-    padding-left: 10px;
-    margin-left:20px;
+    padding: 5px 10px;
+    margin: 20px 16px;
+    border-radius: 8px;
+    background-color: #555
+}
+
+blockquote p
+{
+    margin:0px;
 }
 
 h4
