@@ -94,6 +94,16 @@ ul.post-list
     list-style-type: none;
 }
 
+ul.exp
+{
+    list-style: none;
+    max-width: 500px;
+}
+
+
+
+
+
 blockquote
 {
     font-style: italic;
@@ -117,6 +127,8 @@ h4
     margin-top: 10px;
 }
 
+ul.exp time { color:#C4C4C4; font-style: italic; margin-left: 20px}
+
 code
 {
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
@@ -124,7 +136,9 @@ code
 }
 @media all and (min-width : 763px){
     article { text-align: justify}
+    ul.exp time { float:right; margin-left: none}
 }
+
 @media all and (max-width : 1050px) {
   nav h1 { padding-left: 15px;display:inline-block; float:left; margin-bottom:10px }
   nav {  margin-top:0px; min-width:500px; position:absolute; display:inline-block; width:100%; padding: 10px 40px 0px 15px;  height:auto; }
@@ -133,6 +147,7 @@ code
   article { margin-left:25px; margin-top: 75px; min-width:445px}
   nav>ul:nth-of-type(2) { display:none; }
   object, video, div.video-wrapper, div.player { width:100%; max-width:100% !important; }
+  nav>ul:first-of-type>li:nth-child(4) {display:none;}
 }
 
 .highlight .hll { background-color: #49483e }
