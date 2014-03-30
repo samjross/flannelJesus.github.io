@@ -115,7 +115,9 @@ code
     font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
     font-size:12px;
 }
-
+@media all and (min-width : 763px){
+    article { text-align: justify}
+}
 @media all and (max-width : 1050px) {
   nav h1 { padding-left: 15px;display:inline-block; float:left; margin-bottom:10px }
   nav {  margin-top:0px; min-width:500px; position:absolute; display:inline-block; width:100%; padding: 10px 40px 0px 15px;  height:auto; }
