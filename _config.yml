@@ -3,3 +3,4 @@ lsi: false
 pygments: true
 timezone: Europe/London
 encoding: utf-8
+markdown: kramdown
