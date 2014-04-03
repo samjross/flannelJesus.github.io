@@ -24,7 +24,7 @@ code
     font-size:14px;
 }
 
-.highlight pre { background: transparent; color: #f8f8f2; padding:15px 10px 15px 0px}
+.highlight pre { background: transparent; color: #f8f8f2; padding:0px 10px 0px 0px}
 .highlight .c { color: #75715e } /* Comment */
 .highlight .err { color: #960050; background-color: #1e0010 } /* Error */
 .highlight .k { color: #66d9ef } /* Keyword */
