@@ -60,13 +60,17 @@ nav h1
 article>time {color:#C4C4C4;float:right;font-size:16px; margin:15px 0px 0px 20px}
 article h2 { font-size:32px;  margin-bottom:10px; margin-top:0px; font-weight:100}
 article h4 { font-weight: 100; font-size: 18px; font-style: italic; margin-top: 10px;}
-article p {margin: 18px 0; font-size:16px; line-height:21px;}
+article p, article a {margin: 18px 0; font-size:18px; line-height:23px;}
 article a { text-decoration:underline; }
+
+
 p.view { text-align: center; margin-top: 30px }
 p.view a {text-decoration:none}
 p.view>a {font-size:18px; margin: 0px 10px 0px 10px}
 p.view em a:hover {text-decoration: underline}
 p.view a.inactive {pointer-events: none; cursor: default; color:#888;}
+p.view em a {font-size:16px;}
+
 article blockquote { font-style: italic; color:#ccc; border-left: 10px solid #444; padding-left:10px; margin: 15px 25px 15px 20px }
 
 article ul { margin-left:0px;}
@@ -117,6 +121,6 @@ ul.exp time { color:#C4C4C4; font-style: italic; margin-left: 20px;float:right}
     .content {
         text-align: justify
     }
-    
+
     h2 {text-align:left}
 }

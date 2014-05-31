@@ -24,7 +24,7 @@ code
     font-size:14px;
 }
 
-p>code {background-color:#333; padding:3px; border-radius:5px;background-image:url('/assets/pre_background.jpg'); margin:0px 2px; color:#E6DB74;}
+p>code {display:inline-block;line-height:18px;background-color:#333; padding:3px; border-radius:5px;background-image:url('/assets/pre_background.jpg'); margin:0px 2px; color:#E6DB74;}
 
 .highlight pre { background: transparent; color: #f8f8f2; padding:0px 10px 0px 0px}
 .highlight .c { color: #75715e } /* Comment */
