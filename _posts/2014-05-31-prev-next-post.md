@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Shopify Liquid Template - "Next Post" and "Previous Post" Links
+title: Shopify Liquid Template - “Next Post” and “Previous Post” Links
 subtitle: I recently implemented those links after a long time of not knowing how. I thought I'd share what I did here.
 ---
 

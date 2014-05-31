@@ -60,7 +60,7 @@ nav h1
 article>time {color:#C4C4C4;float:right;font-size:16px; margin:15px 0px 0px 20px}
 article h2 { font-size:32px;  margin-bottom:10px; margin-top:0px; font-weight:100}
 article h4 { font-weight: 100; font-size: 18px; font-style: italic; margin-top: 10px;}
-article p, article a {margin: 18px 0; font-size:18px; line-height:23px;}
+article p {margin: 18px 0; font-size:18px; line-height:23px;}
 article a { text-decoration:underline; }
 
 
