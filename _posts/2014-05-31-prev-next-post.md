@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Liquid Template - "Next Post" and "Previous Post" Links
+title: Shopify Liquid Template - "Next Post" and "Previous Post" Links
 subtitle: I recently implemented those links after a long time of not knowing how. I thought I'd share what I did here.
 ---
 
@@ -9,7 +9,7 @@ In my "post" layout, I placed the following after <code>{% raw %}{{ content }}{%
 {% highlight html linenos %}
 <p class="view">
     {% raw %}{% if page.previous.url %}{% endraw %}
-        <a class="prev" href="{{page.previous.url}}" title="{{page.previous.title}}">
+        <a class="prev" href="{% raw %}{{page.previous.url}}{% endraw %}" title="{% raw %}{{page.previous.title}}{% endraw %}">
     {{"{% else " }}%}
         <a class="inactive">
     {{"{% endif " }}%}
@@ -17,7 +17,7 @@ In my "post" layout, I placed the following after <code>{% raw %}{{ content }}{%
         </a>
     <em> <a href="/">view more</a> </em>
     {{"{% if page.next.url " }}%}  
-        <a class="next" href="{{page.next.url}}" title="{{page.next.title}}" >
+        <a class="next" href="{% raw %}{{page.next.url}}{% endraw %}" title="{% raw %}{{page.next.title}}{% endraw %}" >
     {{"{% else " }}%}
         <a class="inactive">
     {{"{% endif " }}%}
