@@ -114,7 +114,9 @@ ul.exp time { color:#C4C4C4; font-style: italic; margin-left: 20px;float:right}
 }
 
 @media (min-width: 70em) {
-    .content *:not(h2) {
+    .content {
         text-align: justify
     }
+    
+    h2 {text-align:left}
 }
