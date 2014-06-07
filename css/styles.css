@@ -97,8 +97,8 @@ body>div {
 
 nav h1
 {
-    font-weight:300;
-    font-size: 18px;
+    font-weight:700;
+    font-size: 20px;
 }
 
 .nav-list {
@@ -117,7 +117,7 @@ nav h1
 }
 
 article>time {color:#C4C4C4;float:right;font-size:16px; margin:15px 0px 0px 20px}
-article h2 { font-size:32px;  margin-bottom:10px; margin-top:0px; font-weight:700}
+article h2 { font-size:32px;  margin-bottom:10px; margin-top:0px; font-weight:500}
 time, h2 {letter-spacing: -1px;word-spacing: 1px}
 article h4 { font-weight: 100; font-size: 18px; font-style: italic; margin-top: 10px;}
 article p {margin: 18px 0; font-size:18px; line-height:23px;}
