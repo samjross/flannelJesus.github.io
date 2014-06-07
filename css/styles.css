@@ -1,4 +1,23 @@
 @font-face {
+  font-family: 'dn';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/assets/fonts/d300.woff') format('woff');
+}
+@font-face {
+  font-family: 'dn';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/assets/fonts/d500.woff') format('woff');
+}
+@font-face {
+  font-family: 'dn';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/d700.woff') format('woff');
+}
+
+@font-face {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 300;
@@ -41,7 +60,7 @@
     box-sizing: border-box;
 }
 
-html, body {font-family: "Roboto", sans-serif; background-color: #4d4d4d; color:white;}
+html, body {font-family: dn, sans-serif; background-color: #4d4d4d; color:white;}
 
 a {
     text-decoration: none;
@@ -74,17 +93,20 @@ body>div {
     background: #444;
 }
 
+.sidebar .header {font-size:18px}
+
 nav h1
 {
-    font-weight:100;
-    font-size: 16px;
+    font-weight:300;
+    font-size: 18px;
 }
 
 .nav-list {
     margin: 0;
     padding: 0;
     list-style: none;
-    font-weight:100;
+    font-weight:300;
+    line-height: 20px
 }
 
 
@@ -95,7 +117,7 @@ nav h1
 }
 
 article>time {color:#C4C4C4;float:right;font-size:16px; margin:15px 0px 0px 20px}
-article h2 { font-size:32px;  margin-bottom:10px; margin-top:0px; font-weight:100}
+article h2 { font-size:32px;  margin-bottom:10px; margin-top:0px; font-weight:700}
 article h4 { font-weight: 100; font-size: 18px; font-style: italic; margin-top: 10px;}
 article p {margin: 18px 0; font-size:18px; line-height:23px;}
 article a { text-decoration:underline; }
@@ -111,7 +133,7 @@ p.view em a {font-size:16px;}
 article blockquote { font-style: italic; color:#ccc; border-left: 10px solid #444; padding-left:10px; margin: 15px 25px 15px 20px }
 
 article ul { margin-left:0px;}
-ul.post-list { list-style-type: none; line-height:20px}
+ul.post-list { list-style-type: none; line-height:20px; font-size:18px;}
 ul.post-list time { margin-right:10px; color:#C4C4C4; font-style: italic; }
 ul.exp {  list-style: none; width:35em }
 ul.exp time { color:#C4C4C4; font-style: italic; margin-left: 20px;float:right}
@@ -144,7 +166,6 @@ ul.exp time { color:#C4C4C4; font-style: italic; margin-left: 20px;float:right}
         top: 0;
         bottom: 0;
         width:13em;
-        padding-left:20px;
     }
 
     body {padding-right: 2em}
