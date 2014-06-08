@@ -101,13 +101,15 @@ p.view em a:hover {text-decoration: underline}
 p.view a.inactive {pointer-events: none; cursor: default; color:#888;}
 p.view em a {font-size:16px;}
 
+table.exp {margin-left:40px; font-size:18px;}
+table.exp td {padding-right:30px;line-height:18px}
+table.exp time {font-style:italic; color:#bbb}
+
 article blockquote { font-style: italic; color:#ccc; border-left: 10px solid #444; padding-left:10px; margin: 15px 25px 15px 20px }
 
 article ul { margin-left:0px;}
 ul.post-list { list-style-type: none; line-height:20px; font-size:18px;}
 ul.post-list time { margin-right:10px; color:#C4C4C4; font-style: italic; }
-ul.exp {  list-style: none; width:35em }
-ul.exp time { color:#C4C4C4; font-style: italic; margin-left: 20px;float:right}
 
 
 @media (max-width: 47.99em) {
