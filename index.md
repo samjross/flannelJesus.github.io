@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Hello World!
-tagline: Supporting tagline
+tagline: Just messing about with Jekyll Bootstrap and Twitter Bootstrap
 ---
 {% include JB/setup %}
 
@@ -12,7 +12,7 @@ Complete usage and documentation available at: [Jekyll Bootstrap](http://jekyllb
 ## Update Author Attributes
 
 In `_config.yml` remember to specify your own data:
-    
+
     title : My Blog =)
     
     author :
