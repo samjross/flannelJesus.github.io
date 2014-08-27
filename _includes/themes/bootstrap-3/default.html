@@ -67,12 +67,15 @@
                 {% assign group = 'navigation' %}
                 {% include JB/pages_list %}
             </ul>
-            <form class="navbar-form navbar-right" role="search">
+            <form action="http://www.google.com/search" class="navbar-form navbar-right" method="get">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input class="form-control" placeholder="Search" name="q" size="31" maxlength="255" value="" type="text">
                 </div>
-                <button type="submit" class="btn btn-default">Submit</button>
+                <input value="Search" class="btn btn-default" type="submit">
+                <input style="display:none" value="{{ site.production_url }}" name="sitesearch" checked="" type="radio">
+                {% comment %}You must specify the variable 'production_url' in your _config.yml file{% endcomment %}
             </form>
+
         </div>
         <!-- /.navbar-collapse -->
     </nav>
