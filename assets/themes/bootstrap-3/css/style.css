@@ -51,6 +51,10 @@ h1, h2, h3, h4 {
 .tag_box li {
   line-height: 28px; }
 
+.tag_box li:first-child {
+    margin-right:5px
+}
+
 .tag_box li i {
   opacity: 0.9; }
 
