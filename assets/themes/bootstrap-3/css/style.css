@@ -21,7 +21,21 @@ h1, h2, h3, h4 {
   background-color: #fdcd60;
 }
 
+.container {
+  max-width:900px;
+}
 
+/* img styling */
+.content img {
+vertical-align: middle;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+display: block;
+border: solid 1px #aaa;
+padding: 2px;
+max-width: 100%;
+}
 
 /* posts index */
 .post > h3.title {
