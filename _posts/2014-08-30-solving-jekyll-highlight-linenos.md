@@ -8,11 +8,13 @@ excerpt: ""
 ---
 I don't always blog, but when I do I'm very picky about styling. You probably can't tell by the state of this blog -- I haven't added much custom styling at all. This is actually almost fully the out-of-the-box [Jekyll Bootstrap](http://jekyllbootstrap.com/) site. I'm working on a very cool (imo) style for this blog, but it's nowhere near ready yet.
 
-But now that I'm into programming, I figured I am going to want to blog using code snippets here and there. I look a good syntax highlighting color scheme, and I've seen some very impressive ones on some peoples' blogs -- `pre` styling that made programming look downright sexy. So I got to work.
+But now that I'm into programming, I figured I am going to want to blog using code snippets here and there. I like a good syntax highlighting color scheme, and I've seen some very impressive ones on some peoples' blogs -- `pre` styling that made programming look downright sexy. So I got to work.
 
 The first thing I did - tangential to this blog post - was install in `assets` all of the pygment stylesheets from [here](http://richleland.github.io/pygments-css/), bulk-change some of the class names to work with what Pygment outputs, and then add some code to my Jekyll layouts so that all I have to do is change `highlighter_style: name` in the `_config` file to match the file `name.css` for whatever stylesheet I wanted, or change the same property in the frontmatter of any post or page -- so now it's that easy for me to change to a different syntax highlighter.
 
 Now with those style sheets taken care of, my thoughts came to this: with my prior experience with Jekyll (I had a Jekyll blog on this same domain that I completely scrapped), I remember having one problem that really bugged me: highlight lang linenos. I wanted line numbers presented with my code, but just using `{{ "{% highlight python linenos " }}%}` placed the numbers inline with the code -- an obvious problem for copy-pasting. (btw, if you're wondering how I just posted liquid tags within a Jekyll post, check out [this link](http://stackoverflow.com/questions/3426182/how-to-escape-liquid-template-tags) or view my [source code](https://github.com/flannelJesus/flannelJesus.github.io))
+
+I've been interested for a long time in potentially writing guides and books on programming or web design, and so this functionality is actually pretty important to me.
 
 Some googling and I found out how to get code snippets produced by pygments that allowed for copy-pasting without copying the line numbers. [thanpolas](http://thanpol.as/jekyll/jekyll-code-highlight-and-line-numbers-problem-solved/) posted about it. You'll see a similarity between the title of his post and the title of my post, but I've gone a step further than him.
 
