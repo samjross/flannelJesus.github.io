@@ -83,7 +83,7 @@ JB :
     # provider: false
     provider : disqus
     disqus :
-      short_name : jekyllbootstrap
+      short_name : flanneljesus
     livefyre :
       site_id : 123
     intensedebate :
