@@ -80,9 +80,8 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider: false
-
-    # provider : disqus
+    # provider: false
+    provider : disqus
     disqus :
       short_name : jekyllbootstrap
     livefyre :
@@ -100,7 +99,8 @@ JB :
   # Set 'provider' to false to turn analytics off globally.
   #
   analytics :
-    provider : google
+    # provider : google
+    provider: false
     google :
         tracking_id : 'UA-123-12'
     getclicky :
@@ -129,4 +129,3 @@ JB :
   # and include your custom code. Your custom file must be defined at:
   #   ./_includes/custom/[HELPER]
   # where [HELPER] is the name of the helper you are overriding.
-
