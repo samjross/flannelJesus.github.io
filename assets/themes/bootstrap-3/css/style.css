@@ -17,6 +17,7 @@
 h1, h2, h3, h4 {
   color: #f22430;
 }
+
 #footer {
   background-color: #fdcd60;
 }
@@ -70,7 +71,7 @@ max-width: 100%;
 }
 
 .tag_box li i {
-  opacity: 0.9; }
+  opacity: 1; }
 
 .tag_box.inline li {
   float: left; }
@@ -95,3 +96,16 @@ max-width: 100%;
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
+
+table.highlighttable {
+  overflow:scroll;
+  display:block;
+}
+
+table.highlighttable td.code {
+  width:100%;
+}
+
+pre code {
+  white-space: pre;
+}
