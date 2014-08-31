@@ -11,6 +11,8 @@ highlighter_style: monokai
 # so be sure to set them if your theme uses them.
 #
 # safe: false
+gems:
+  - jekyll-redirect-from
 title : Flannel Jesus
 tagline: Site Tagline
 author :

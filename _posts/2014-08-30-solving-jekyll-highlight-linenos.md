@@ -2,9 +2,10 @@
 layout: post
 title: "Solving Jekyll Highlight Linenos"
 description: ""
-category: 
+category: jekyll
 tags: [jekyll, code, styling, css]
 excerpt: ""
+redirect_from: "/2014-08-30/solving-jekyll-highlight-linenos/"
 ---
 I don't always blog, but when I do I'm very picky about styling. You probably can't tell by the state of this blog -- I haven't added much custom styling at all. This is actually almost fully the out-of-the-box [Jekyll Bootstrap](http://jekyllbootstrap.com/) site. I'm working on a very cool (imo) style for this blog, but it's nowhere near ready yet.
 
