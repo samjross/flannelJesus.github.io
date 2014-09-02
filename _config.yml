@@ -13,6 +13,7 @@ highlighter_style: monokai
 # safe: false
 gems:
   - jekyll-redirect-from
+  - jekyll-sitemap
 title : Flannel Jesus
 tagline: Site Tagline
 author :
