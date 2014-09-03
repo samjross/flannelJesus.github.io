@@ -100,6 +100,7 @@ max-width: 100%;
 table.highlighttable {
   overflow:scroll;
   display:block;
+  margin-bottom:10px;
 }
 
 table.highlighttable td.code {
@@ -108,4 +109,20 @@ table.highlighttable td.code {
 
 pre code {
   white-space: pre;
+}
+
+.highlighttable pre {
+  margin:0px;
+  border: none;
+  border-radius: 0px;
+}
+
+.highlighttable .linenos pre {
+  color: #4a4a40;
+  background-color: #e7e7e1;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.highlighttable .code pre {
+  border-radius: 0px 10px 10px 0px;
 }
