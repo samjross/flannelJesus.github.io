@@ -90,7 +90,7 @@ h1, h2, h3, h4 {
   color: #FFF; }
 
 table.highlighttable {
-  overflow:scroll;
+  overflow-x:auto;
   display:block;
   margin-bottom:10px;
 }
