@@ -97,7 +97,7 @@ I added only a total of 12 lines to my css file - and that's 12 *prettified* lin
 
 {% highlight css linenos=table %}
 table.highlighttable {
-  overflow:scroll;
+  overflow-x:auto;
   display:block;
 }
 
@@ -109,6 +109,8 @@ pre code {
   white-space: pre;
 }
 {% endhighlight %}
+
+<aside class="well well-sm">Line 2 above used to say 'overflow:scroll' rather than 'overflow-x:auto' -- this looked fine on my Macbook but thanks to an observant reader I found soon that it had a very wonky effect on Windows.</aside>
 
 The first 8 lines above solved the problem of overflow in the code area - there is only a horizontal scroll in the code area now, not affecting the entire page. 
 
