@@ -12,7 +12,7 @@ In RPGs, after you defeat an enemy you see your experience go up; there's a lot 
 
 <div class="row">
 	<div class="col-sm-10 col-sm-offset-1">
-		<a href="#" class="thumbnail">
+		<a class="thumbnail">
 			<img src="{{ site.url }}/assets/excelexp.jpg" alt="excel exp screenshot">
 		</a>
 	</div>
@@ -35,7 +35,7 @@ The progress bar has the value of the cell above it, the percentage cell. To hid
 
 <div class="row">
 	<div class="col-sm-8 col-sm-offset-2">
-		<a href="#" class="thumbnail">
+		<a class="thumbnail">
 			<img src="{{ site.url }}/assets/progressbar.jpg" alt="excel progress bar settings">
 		</a>
 	</div>

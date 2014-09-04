@@ -87,7 +87,7 @@ In addition to the line-wrapping problems that he saw, I also noticed the follow
 
 <div class="row">
 	<div class="col-sm-6 col-sm-offset-3">
-		<a href="#" class="thumbnail">
+		<a class="thumbnail">
 			<img src="{{ site.url }}/assets/linenos.jpg" alt="">
 		</a>
 	</div>
