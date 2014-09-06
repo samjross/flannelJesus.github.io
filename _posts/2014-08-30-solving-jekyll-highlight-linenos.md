@@ -85,7 +85,7 @@ In addition to the line-wrapping problems that he saw, I also noticed the follow
 
 * When I resized the display to phone-size, the line numbers on the left for some reason started wrapping, so instead of saying '12', line 12 had the 2 below the 1, and the whole thing just got messed up altogether.
 
-<img class="thumbnail" src="{{ site.url }}/assets/linenos.jpg" alt="">
+<img src="{{ site.url }}/assets/linenos.jpg" alt="">
 
 
 I added only a total of 12 lines to my css file - and that's 12 *prettified* lines - though I'm not sure how much of the solution came from using Bootstrap in the first place. Here's what I added:
@@ -105,7 +105,7 @@ pre code {
 }
 {% endhighlight %}
 
-<aside class="well well-sm">Line 2 above used to say 'overflow:scroll' rather than 'overflow-x:auto' -- this looked fine on my Macbook but thanks to an observant reader I found soon that it had a very wonky effect on Windows.</aside>
+<aside>Line 2 above used to say 'overflow:scroll' rather than 'overflow-x:auto' -- this looked fine on my Macbook but thanks to an observant reader I found soon that it had a very wonky effect on Windows.</aside>
 
 The first 8 lines above solved the problem of overflow in the code area - there is only a horizontal scroll in the code area now, not affecting the entire page. 
 

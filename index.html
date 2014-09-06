@@ -13,14 +13,15 @@ tagline: Just messing about with Jekyll Bootstrap and Twitter Bootstrap
 
 <p>In <code>_config.yml</code> remember to specify your own data:</p>
 
-<pre><code>title : My Blog =)
+{% highlight yaml %}
+title : My Blog =)
 
 author :
   name : Name Lastname
   email : blah@email.test
   github : username
   twitter : username
-</code></pre>
+{% endhighlight %}
 
 <p>The theme should reference these variables whenever needed.</p>
 
@@ -29,8 +30,9 @@ author :
 <p>This blog contains sample posts which help stage pages and blog data.
 When you don’t need the samples anymore just delete the <code>_posts/core-samples</code> folder.</p>
 
-<pre><code>$ rm -rf _posts/core-samples
-</code></pre>
+{% highlight console %}
+$ rm -rf _posts/core-samples
+{% endhighlight %}
 
 <p>Here’s a sample “posts list”.</p>
 
