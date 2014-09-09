@@ -10,7 +10,7 @@ I've been interested in gamification for a long time. Before HabitRPG came out, 
 
 In RPGs, after you defeat an enemy you see your experience go up; there's a lot of pleasure in that. This is what I wanted.
 
-<img src="{{ site.url }}/assets/excelexp.jpg" alt="excel exp screenshot">
+<img src="{{ site.url }}/assets/images/excelexp.jpg" alt="excel exp screenshot">
 
 
 I'll risk belaboring the obvious for the sake of full clarity:
@@ -28,7 +28,7 @@ Now the percentage formula is quite simple: first you make a named range that co
 The progress bar has the value of the cell above it, the percentage cell. To hide the percentage, I've given it the custom format of the empty string again. I use Excel's built-in progress bar format: select the cell > Conditional Formatting > New Rule > Data Bar. Change the minimum to Number, 0. Change the maximum to Number, 1.
 
 
-<img src="{{ site.url }}/assets/progressbar.jpg" alt="excel progress bar settings">
+<img src="{{ site.url }}/assets/images/progressbar.jpg" alt="excel progress bar settings">
 		
 
 I have dozens of sheets in my workbork corresponding to reading material, video tutorials, etc. that I'm either working on or done with. It encourages me to keep working and it serves as a bookmark for things that I can't easily bookmark otherwise. It has served me well, and I continue to use it in conjunction with other tools like HabitRPG.
