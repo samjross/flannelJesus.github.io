@@ -1,0 +1,8 @@
+/* hello */
+.flex {
+	display: flex;
+}
+
+.flex > div > img {
+	width: 100%;
+}
