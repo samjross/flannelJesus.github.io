@@ -1,8 +1,67 @@
 /* hello */
 .flex {
 	display: flex;
+	flex-wrap:wrap;
 }
 
-.flex > div > img {
+.flex a {
+	padding:.3em;
+	color:white;
+	display:block;
+	background-color:grey;
+}
+
+.flex a:hover {
+	text-decoration: none;
+	background-color: #4d7c88;
+}
+
+.flex a > img {
 	width: 100%;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.flex a > h3 {
+	color: #d1d1d1;
+}
+
+.first-try {
+  justify-content:space-between;
+  
+}
+
+.first-try a {
+  width:49%;
+  width: calc(50% - 6px);
+  margin-bottom:10px;
+}
+
+.first-try > a:first-child {
+  width:100%;
+}
+
+@media screen and (min-width:500px) {
+  .first-try a {
+    width: 32%;
+    width: calc(100% / 3 - 8px);
+  }
+  
+  .first-try > a:nth-child(1), .first-try > a:nth-child(2) {
+    width: 49%;
+    width: calc(50% - 6px);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .first-try > a {
+    width:24%;
+    width: calc(25% - 8px);
+  }
+  
+  .first-try  > a:nth-child(1), .first-try  > a:nth-child(2), .first-try  > a:nth-child(3) {
+    width: 32%;
+    width: calc(100% / 3 - 8px);
+  }
 }

@@ -28,62 +28,89 @@ There will be 11 posts, and in all variations of the display, the first row of p
 ## First Try
 
 <div class="first-try flex">
-	<div>
+	<a href="">
+		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
+		<h3>post title</h3>
+		<p>post description. Make this description extra long to show that the other boxes take up same vertical space.</p>
+	</a>
+	<a href="">
 		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
 		<h3>post title</h3>
 		<p>post description</p>
-	</div>
-	<div>
+	</a>
+	<a href="">
 		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
 		<h3>post title</h3>
 		<p>post description</p>
-	</div>
-	<div>
+	</a>
+	<a href="">
 		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
 		<h3>post title</h3>
 		<p>post description</p>
-	</div>
-	<div>
+	</a>
+	<a href="">
 		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
 		<h3>post title</h3>
 		<p>post description</p>
-	</div>
-	<div>
+	</a>
+	<a href="">
 		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
 		<h3>post title</h3>
 		<p>post description</p>
-	</div>
-	<div>
+	</a>
+	<a href="">
 		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
 		<h3>post title</h3>
 		<p>post description</p>
-	</div>
-	<div>
+	</a>
+	<a href="">
+		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
+		<h3>post title</h3>
+		<p>post description. Another extra long one to prove my point</p>
+	</a>
+	<a href="">
 		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
 		<h3>post title</h3>
 		<p>post description</p>
-	</div>
-	<div>
+	</a>
+	<a href="">
 		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
 		<h3>post title</h3>
 		<p>post description</p>
-	</div>
-	<div>
+	</a>
+	<a href="">
 		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
 		<h3>post title</h3>
 		<p>post description</p>
-	</div>
-	<div>
+	</a>
+</div>
+
+I'm not going to detail the full css - you can look at the source code for that - but I'll talk about the important bits. First the html:
+
+{% highlight html %}
+<div class="first-try flex">
+	<a href="">
 		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
 		<h3>post title</h3>
 		<p>post description</p>
-	</div>
-	<div>
-		<img src="{{ site.url }}/assets/images/postlistimg.jpg" alt="post list image">
-		<h3>post title</h3>
-		<p>post description</p>
-	</div>
-</div>				
+	</a>
+	... 10 more of those ...
+</div>
+{% endhighlight %}
+
+To get the effect, first I set the outer div to `display: flex`, `flex-wrap: wrap`, and `justify-content: space-between`. The `a` tags are set to `display:block` though I don't think that was necessary. Then I define the widths of the `a` elements, `.first-try > a`. I am using the 'calc' css which helps me to acheive precise distances between the `a` blocks but I set a fallback % width first. The specific details of those are not really relevant -- it's fairly straight forward, when I need 3 posts in a row, I have the width be a little under 33%, when I need 4 posts, a little under 25%, and when I need 1 post, 100%, etc.
+
+It works beautifully -- very beautifully! They're perfectly spaced apart, each post block on the same row is forced to have the same height! What can go wrong?
+
+Well, I thought about it and realized that if I'm paginating my posts to 11 posts per page, the first pages will have 11 posts but the last page will usually have fewer. When you take off a block -- try it in your dev-tools -- the last row looks funky. The `justify-content: space-between` style messes it up, produces the following result:
+
+![unsightly gap between blocks]({{ site.url }}/assets/images/ugly-gap.jpg)
+
+So when there are fewer blocks on the last row than on the last above, instead of the blocks essentially 'floating' left like you'd want them to, the space gets distributed evenly between them.
+
+Now, it might be that using `display:table` solves my problems -- I don't know. It might be that display table forces the blocks to be the same height, and -- this is the part I doubt, which is why I went to flex in the first place -- allows for a responsive number of blocks that changes based on the width of the container. 
+
+I'd like to know if `display:table` can meet all my needs -- I know just the standard `float:left` can't, and I'd have a helluva time trying to get the bootstrap grid classes working to my favor (and I'm looking into flexbox largely to avoid bootstrap classes) -- so please comment if `table` a feasible way to do it. But for now, I'm just focusing on the flexbox model. I'm going to try again, this time using a very different approach and avoiding `justify-content: space-between` or the even more-problematic `space-around`.
 
 ## Second Try
 
