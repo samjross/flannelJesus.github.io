@@ -22,6 +22,7 @@ h1, h2, h3, h4 {
   background-color: #fdcd60;
   min-height:30px;
   height:30px;
+  border-color: #c09022;
 }
 
 .navbar-fixed-bottom p {
