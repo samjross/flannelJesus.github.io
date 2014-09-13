@@ -178,6 +178,8 @@ It looks very much the same as the above result -- same breakpoints even -- but 
 
 This is undesirable as well: I just want the last row to essentially `float:left`.
 
+In addition, I'm quite unhappy with this attempt because it fails on iPhone 4S quite spectacularly. I don't think I did the math right on some of the css or something.
+
 ## Third Try
 
 <div class="third-try flex">
@@ -250,6 +252,6 @@ When I want a block to take up the full width, I use `width: calc(100% - 12px)`.
 
 Now, when I take off a block it DOES float left on the bottom row. It works perfectly. And I'm constantly worried that the solution I'm coming up with doesn't depend on `display:flex` - I think, "Couldn't I just have done this by using `float: left` in the first place?" But no, I couldn't. That wouldn't have forced the blocks on the same row to take the same (unsepcified) height. If I wanted them to have the same height, I'd have to specify that, and I think it's much more elegant not to; to allow for a variable height depending on content.
 
-I think I can also tweak this to make it not depend on `calc`: if I wrap the post blocks in a div and set their widths to 100%, 50%, 33.33% and 25%, and give those divs a padding of 6px, that may produce the same result without having to use a feature that isn't supported as much as I'd like. However, I think it's fair to say that if someone's browser can support flex, it can probably support calc as well, based on the results of *caniuse*.
+I think I can also tweak this to make it not depend on `calc`: if I wrap the post blocks in a div and set their widths to 100%, 50%, 33.33% and 25%, and give those divs a padding of 6px, that may produce the same result without having to use a feature that isn't supported as much as I'd like. However, I think it's fair to say that if someone's browser can support flex, it can probably support calc as well, based on the results of *caniuse*. I'll be implementing this on the front page of my own blog soon.
 
 I hope someone finds value in these little experiments. I haven't seen nearly enough examples of the sorts of things flexbox can help you solve. Sites like [this](http://philipwalton.github.io/solved-by-flexbox/), [this](http://demosthenes.info/blog/854/Easy-Responsive-Grid-Layout-With-Flexbox) and [this](http://demosthenes.info/blog/844/Easy-Masonry-Layout-With-Flexbox) have been incredibly helpful for me, and I'd like to see a bit more experimentation with flexbox. I'm also quite excited to see what [grid layout](http://www.w3.org/TR/css3-grid-layout/) can acheive. 
