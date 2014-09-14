@@ -1,0 +1,84 @@
+---
+layout: post
+title: "Masonry Images with Display: Grid"
+description: "Exploring an interesting (and untested) approach to masonry images"
+category: web design
+tags: [css, grid]
+---
+{% include JB/setup %}
+
+In my last post, about using `display flex` to acheive an attractive post layout, I linked to [this post](http://demosthenes.info/blog/844/Easy-Masonry-Layout-With-Flexbox) about how to use `flex` to create a Masonry layout. I think it's a brilliant technique, but it has one problem in relation to what you'd expect a Masonry layout to acheive: namely, the order of elements is wrong. In a standard Masony layout with eg. 4 columns, you expect the first picture in the first column, the second picture in the second column, the third picture in the third column, the 4th picture in the 4th column, and then with the 5th picture you'd loop down to the first column again (that's not the *only* way to do it -- some methods I think involve pushing the 5th picture up against the picture who's bottom is the highest, and the 6th picture up against the highest one after that). But in the method linked, you first fit as many pictures as you can into the first column, and then fit pictures into the second column, and then the third, etc. So instead of filling left to right, you're filling up to down first and then left to right. Also, the whole box that contains the Masonry layout has to have a fixed height.
+
+So that got me thinking about if there are any approaches that achieve a standard left-to-right-then-down layout. As far as I'm aware, most approaches in use use Javascript to position elements absolutely based on the column with the highest bottom, but we don't want to depend on Javascript. And, frankly, this design pattern doesn't sound that niche or rare enough to be something that requires hackery. There should be some support for it at some level, in some way, without Javascript. And it's not through Flexbox. So how do you do it?
+
+I haven't tried it yet, because I don't have Internet Explorer installed on my macbook, but I'm fairly certain you can use `display: grid` cleverly to acheive a Masonry layout that flows left to right and then down. In my readings about flexbox, I came across a discussion of `disply: grid` and was really interested in what I read. I read through the [W3C](http://www.w3.org/TR/2012/WD-css3-grid-layout-20120322/) page a bit. I think we can use it to achieve a Masonry layout. The only tradeoff is that you don't get to have the 5th block pushing up against the highest-bottomed column; blocks all have to be the same width (a common constraint of masonry layouts anyway) and you have to have the 5th block in the 1st column and the 6th block in the 2nd column, etc. It's not a perfect Masonry result, but I think it's good enough. AND even if it's not good enough for you, it might actually provide for a more lightweight method of acheiving better results (aligning subsequent blocks to the bottom of the highest-bottomed column) with a lot less, and more readable, JavaScript.
+
+Essentially, we'll be using a `modulus` operation to force blocks into the correct column. Css conveniently offers such an operation: we just need to use `element:nth-child(_)`.
+
+First, the html:
+
+{% highlight html %}
+<div class="masonry">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+</div>
+{% endhighlight %}
+
+I'll walk through the css that I think will be what we'll use.
+
+First, the obvious `.masonry {display:grid}`. We'll use 4 columns, but because of the nature of Masonry layout having variable height, we'll use only 1 row. According to the docs, I think you can set 4 columns of equal width something like this: `grid-columns: 25% 25% 25% 25%;`.
+
+Our selectors will be on the `img` elements, based on the `modulus` operation `nth-child()` gives us. The modulus operator is this: `nth-child(xn+y)` is equivalent to `n % x == y` - it will select an element if it's place in order, n, corresponds to the above formula. so `nth-child(3n+1) will select 1, 4, 7, 10, etc. 
+
+<aside>As an aside, I was playing with the previous method, trying to see if using, say, `nth-child(3n+7)` might skip 1 and 4, but it didn't. Not in Chrome anyway. That would have been a useful behavior -- essentially being able to select all elements with modulo 3 == 1, except the first few.</aside>
+
+So, let's use those selectors to put our images in the right columns:
+
+{% highlight css %}
+.masonry {
+	display: grid;
+	grid-columns: 25% 25% 25% 25%;
+}
+
+.masonry img {
+	width:100%;
+	grid-row: 1; /* we only need 1 row */
+}
+
+.masonry img:nth-child(4n+1) {
+	grid-column: 1
+}
+
+.masonry img:nth-child(4n+2) {
+	grid-column: 2
+}
+
+.masonry img:nth-child(4n+3) {
+	grid-column: 3
+}
+
+.masonry img:nth-child(4n) {
+	grid-column: 4
+}
+{% endhighlight %}
+
+And, I think that's mostly it. As I said, I haven't tried this yet, but I'm pretty sure it works.
+
+If we want a gutter between image columns, we may need to put the images in divs and give the divs padding. Or, maybe we just need to add a margin to `.masonry img`, I'm not sure. I kinda want to try it now and find out... So here's my attempt:
+
+<div class="masonry">
+	<img src="http://justsomething.co/wp-content/uploads/2013/11/33-most-powerful-images-23.jpeg" alt="">
+	<img src="http://www.britishlegion.org.uk/ImageGen.ashx?width=800&image=/media/2019101/id23055-normandy-66th_-schools-visit-poppy-choice_-pupils-from-london-city-academy.jpg" alt="">
+	<img src="http://cdn.mos.totalfilm.com/images/e/exclusive-the-amazing-spider-man-2-pictures-153555-a-1389698854-470-75.jpg" alt="">
+	<img src="http://freefunnydogpictures.com/wp-content/uploads/2014/05/pictures_1400046276.jpg" alt="">
+	<img src="http://news.bbcimg.co.uk/media/images/74113000/jpg/_74113834_74113833.jpg" alt="">
+	<img src="http://media3.onsugar.com/files/2012/09/39/4/192/1922243/cf3f7dcec6701811_cute_pomeranians_main.xxxlarge/i/Cute-Pomeranian-Pictures.jpg" alt="">
+	<img src="http://ichef.bbci.co.uk/wwfeatures/624_351/images/live/p0/15/fr/p015frt8.jpg" alt="">
+	<img src="http://images.nationalgeographic.com/wpf/media-live/photos/000/648/cache/best-news-pictures-february-2013-dinosaur_64888_600x450.jpg" alt="">
+</div>
