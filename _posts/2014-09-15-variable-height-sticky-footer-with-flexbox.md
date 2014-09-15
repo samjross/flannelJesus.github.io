@@ -20,7 +20,7 @@ I'm just using the default Bootstrap sticky footer. The Bootstrap code for it is
 </nav>
 {% endhighlight %}
 
-The common to the 'sticky footer' problem involve setting a fixed height to the footer, putting it just outside a wrapper that has a min-height of 100%, and giving the margin-bottom a negative value equal to the height of the footer and a padding-bottom equal to the height of the footer as well. [This](http://ryanfait.com/sticky-footer/) is the top google result for `sticky footer` and it uses a similar method - effectively the same in concept, but slightly different in implementation.
+The common solution to the 'sticky footer' problem involve setting a fixed height to the footer, putting it just outside a wrapper that has a min-height of 100%, and giving the margin-bottom a negative value equal to the height of the footer and a padding-bottom equal to the height of the footer as well. [This](http://ryanfait.com/sticky-footer/) is the top google result for `sticky footer` and it uses a similar method - effectively the same in concept, but slightly different in implementation.
 
 The major problem with this is that someone might want to have a variable-height footer. For example, my footer is a `<p>` element with some text that wraps to 2 lines on some screen sizes. I could mess about with using `@media` queries to increase the height of the footer and the padding and margin of the wrapper, but that's a lot of work and it means extra work every time you decide you want to change the content of the footer.
 
