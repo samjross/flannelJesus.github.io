@@ -115,6 +115,10 @@ table.highlighttable td.code {
   width:100%;
 }
 
+pre {
+  border: none;
+}
+
 pre code {
   white-space: pre;
 }
