@@ -46,3 +46,7 @@ First, you must make sure that `div.content` reaches the bottom; you can use `mi
 Then, `div.content` needs to be set to `display:flex` and `flex-direction:column`. The footer doesn't need any particular styling for this - just whatever you need for the look you want. The article, `.content > article`, needs to be set to `flex-grow:1`. This is what pushes the footer down to the bottom - if the article content isn't long enough to push the footer to the bottom, the article will grow take up all the remaining vertical space until there isn't any left.
 
 Imo, this is a more flexible, more robust and simpler solution to how to acheive sticky footers. It doesn't tie you in 3 places of the css to any particular height, the height changes as needed, and the css is fairly minimal and clean.
+
+<div class="alert alert-info">
+	<p>After making this post, I found out that I wasn't the first to come up with the technique. A basically identical approach was laid out in a series of posts that I've seen before. I don't think I copied the guy's solution though; I don't think I looked at it. I think I came up with mine independently.</p>
+</div>
