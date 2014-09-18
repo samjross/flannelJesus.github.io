@@ -9,6 +9,8 @@ tags: [css, web design, flex-box, layout]
 
 I have a crappy footer on this site at the moment. It is 'sticky' in the wrong way -- it uses `position: fixed` so it stays on screen always. My idea of a 'sticky footer' is more that it stays pushed to the bottom, regardless of the content above it. 
 
+<aside>Changed the design of this site to reflect the results of this post as of 18 Sep 2014.</aside>
+
 I'm just using the default Bootstrap sticky footer. The Bootstrap code for it is this:
 
 {% highlight html %}
