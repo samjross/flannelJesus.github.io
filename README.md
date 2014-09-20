@@ -1,3 +1,3 @@
 # Flannel Jesus Blog
 
-At the moment, I'm just fiddling about with Jekyll Bootstrap / Twitter Bootstrap
+I'm using this blog to fiddle about with Jekyll, Bootstrap, CSS, HTML, JavaScript and more. I'll also occasionally document some of my fiddling.
