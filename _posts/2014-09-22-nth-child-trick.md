@@ -76,7 +76,7 @@ What I recently wanted to achieve was to use one of those `modulo` selectors, bu
 
 <aside>Fucking hell, I just tried it here and that technique DOES work. The entire reason I was making this post was because that technique didn't work when I tried it a couple weeks ago. I'll keep on posting on my findings anyway.</aside>
 
-OK, that technique *does* work. Apparently the selector works by iterating values of `n` starting from 0 and going up until the selector is too large to apply to anything anymore, or *too small* in the case of a negative coefficient. You can see above I applied `background:orange` with the selector `(3n+1)`. Below I'll show the result of the selector `nth-child(3n+4)`:
+OK, that technique *does* work. You can see above I applied `background:orange` with the selector `(3n+1)`. Below I'll show the result of the selector `nth-child(3n+4)`:
 
 <div class="example e4">
 	<div></div>
@@ -93,7 +93,9 @@ OK, that technique *does* work. Apparently the selector works by iterating value
 
 So, that sorta dampens the entire spirit of this post. HOWEVER, perhaps most people didn't know that you could do that, so maybe this will still be useful.
 
-But anyway, the workaround I discovered (when I still thought `3n+4` selected the same things as `3n+1`) involves another `nth-child` formula that I didn't talk about: `(n+x)` which selects the xth element and beyond. In addition, `(-n+x)` selects elements up to and including x. I'll use `nth-child(n+3)` and `nth-child(-n+5)` below, applying `backround:brown` and `border:solid 2px black` respectively:
+But anyway, the workaround I discovered (when I still thought `3n+4` selected the same things as `3n+1`) involves another `nth-child` formula that I didn't talk about: `(n+x)` which selects the xth element and beyond. In addition, `(-n+x)` selects elements up to and including x. Apparently the selector works by iterating values of `n` starting from 0 and going up until the selector is too large to apply to anything anymore, or *too small* in the case of a negative coefficient. I probably would have known that from the outset if I read any documentation. 
+
+I'll use `nth-child(n+3)` and `nth-child(-n+5)` below, applying `backround:brown` and `border:solid 2px black` respectively:
 
 <div class="example e5">
 	<div></div>
