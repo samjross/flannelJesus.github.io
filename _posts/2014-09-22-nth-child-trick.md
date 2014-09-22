@@ -93,7 +93,7 @@ OK, that technique *does* work. Apparently the selector works by iterating value
 
 So, that sorta dampens the entire spirit of this post. HOWEVER, perhaps most people didn't know that you could do that, so maybe this will still be useful.
 
-But anyway, the workaround I discovered involves another `nth-child` formula that I didn't talk about: `(n+x)` which selects the xth element and beyond. In addition, `(-n+x)` selects elements up to and including x. I'll use `nth-child(n+3)` and `nth-child(-n+5)` below, applying `backround:brown` and `border:solid 2px black` respectively:
+But anyway, the workaround I discovered (when I still thought `3n+4` selected the same things as `3n+1`) involves another `nth-child` formula that I didn't talk about: `(n+x)` which selects the xth element and beyond. In addition, `(-n+x)` selects elements up to and including x. I'll use `nth-child(n+3)` and `nth-child(-n+5)` below, applying `backround:brown` and `border:solid 2px black` respectively:
 
 <div class="example e5">
 	<div></div>
