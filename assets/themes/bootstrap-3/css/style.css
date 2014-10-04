@@ -111,6 +111,7 @@ pre {
 
 pre code {
   white-space: pre;
+  word-wrap: initial;
 }
 
 p > code {
