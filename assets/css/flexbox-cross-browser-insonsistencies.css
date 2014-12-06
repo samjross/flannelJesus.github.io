@@ -16,6 +16,7 @@ div.job-wide-all { display: -webkit-flex; display: -ms-flexbox; display: flex; -
 div.job-wide-all>div { -webkit-flex: 0 1 49%; -ms-flex: 0 1 49%; flex: 0 1 49%; }
 div.job-content-buttons { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
 div.jobs h2 {margin-top:0; color:black;}
+div.jobs img {width:100%;}
 
 @media only screen and (max-width:770px) {
 	div.jobs { width: 100%; min-width: 100% }

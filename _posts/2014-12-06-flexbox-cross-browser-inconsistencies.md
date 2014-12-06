@@ -73,3 +73,17 @@ Now for the screenshots of how different browsers handle this:
 Chrome does just what I would have expected. Now, I developed this solution on Chrome so there's maybe a bit of a bias there -- of course Chrome does what I expect, because in a way Chrome defines my expectations. 
 
 However, I think the differences that other browsers have (which you'll see in just a bit) can be argued to be mistakes; behaviours which you wouldn't expect given the css.
+
+####Firefox on PC:
+![what it looks like on firefox on pc]({{ site.url }}/assets/images/firefoxpcflex.jpg)
+
+The first thing to notice is the margin-bottom of 2% on the upper 2 categories is ignored. If I change it to a pixel value, it works.
+
+The second thing to notice is the huge problems with the Category3 Display. It displays correctly in the mobile view (the only problem there is, again, the ignoring of the bottom margins), but in desktop view the image takes up too much space. I have the div that contains the image set to `flex: 0 1 49%` which means it should not grow from 49% of the width, but it's clearly taking up way more than 49% of the width. It's taking up what I can only assume to be the full width of the image.
+
+####Internet Explorer on PC:
+![what it looks like on internet explorer on pc]({{ site.url }}/assets/images/IEscreenshotflexbox.jpg)
+
+This displays just fine in Desktop view, but looks really really wonky on Category 3 in mobile view. When I change the container div on Category 3 to `flex-direction:column`, the text starts overlapping the image for some strange reason.
+
+I figured out some fixes for the Firefox issues (not the IE one), but I'm not going to post them here because that's not the point of this post. The fixes are workarounds for the annoying problem that shouldn't exist: inconsistent handling of css between browsers. I'm a bit spoilt in that regard: I started getting interested in web design just at the tail end of when people were still regularly designing for compatibility with IE 6. That wasn't a part of my life for very long, *and I don't want it to be a part of my life again*.
