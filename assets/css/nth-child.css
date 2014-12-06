@@ -1,12 +1,18 @@
 div.example {
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
     padding: 1%;
-    justify-content: space-between;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     height: 8vw;
     min-height: 50px;
     border: solid 1px grey;
     margin-bottom: 10px;
-    flex-wrap:wrap;
+    -webkit-flex-wrap:wrap;
+        -ms-flex-wrap:wrap;
+            flex-wrap:wrap;
 }
 div.example div {
     width: 9%;
@@ -37,12 +43,12 @@ div.example.e5 > div:nth-child(-n+5) {
     border: solid 2px black;
 }
 div.example.e6 > div {
-	width:10%;
-	border: solid 1px white;
+    width:10%;
+    border: solid 1px white;
 }
 div.example.e6 {
-	min-height:90px;
+    min-height:90px;
 }
 div.example.e6 > div:nth-last-child(-n+8):nth-child(4n+1) {
-	background:deepskyblue;
+    background:deepskyblue;
 }

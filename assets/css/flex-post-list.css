@@ -1,6 +1,5 @@
 /* hello */
 .flex {
-  display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -35,10 +34,9 @@
 
 /* FIRST TRY STARTS HERE */
 .first-try {
-  -webkit-box-pack:justify;
   -webkit-justify-content:space-between;
-      -ms-flex-pack:justify;
-          justify-content:space-between;
+  -ms-flex-pack:justify;
+      justify-content:space-between;
   
 }
 
@@ -86,15 +84,14 @@
 .second-try a {
   margin: 6px;
   min-width: 160px;
-  -webkit-box-flex: 1;
   -webkit-flex: 1 1 30%;
-      -ms-flex: 1 1 30%;
-          flex: 1 1 30%;
+  -ms-flex: 1 1 30%;
+      flex: 1 1 30%;
 }
 
 .second-try a:first-child {
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
+  -ms-flex-preferred-size: 100%;
+      -webkit-flex-basis: 100%;
           flex-basis: 100%;
 }
 
@@ -104,22 +101,22 @@
   }
 
   .second-try a:first-child, .second-try a:nth-child(2) {
-    -webkit-flex-basis: 45%;
-        -ms-flex-preferred-size: 45%;
+    -ms-flex-preferred-size: 45%;
+        -webkit-flex-basis: 45%;
             flex-basis: 45%;
   }
 }
 
 @media screen and (min-width: 992px) {
   .second-try a{
-    -webkit-flex-basis: 20%;
-        -ms-flex-preferred-size: 20%;
+    -ms-flex-preferred-size: 20%;
+        -webkit-flex-basis: 20%;
             flex-basis: 20%;
   }
 
   .second-try a:first-child, .second-try a:nth-child(2), .second-try a:nth-child(3) {
-    -webkit-flex-basis: 30%;
-        -ms-flex-preferred-size: 30%;
+    -ms-flex-preferred-size: 30%;
+        -webkit-flex-basis: 30%;
             flex-basis: 30%;
   }
 }
