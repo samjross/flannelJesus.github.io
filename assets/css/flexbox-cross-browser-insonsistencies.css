@@ -1,0 +1,25 @@
+div.jobs-flex { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; -webkit-flex-wrap: wrap; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+div.jobs { overflow-wrap: break-word; width: 49%; float: left; box-sizing: border-box; background-color: #ddd; padding: 10px; margin-bottom: 2%; position: relative; }
+div.jobs-flex div.jobs { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+div.job-content { -webkit-flex-grow: 1; -ms-flex-positive: 1; flex-grow: 1; padding: 5px; }
+div.jobs a { font-weight: bold; }
+div.job-buttons { margin-top: 5px }
+a.job-button { text-decoration: none; margin-right: 2px; font-size: 16px; display: block; margin-bottom: 4px;background-color: #999; color: white; padding: 3px 5px; border-radius: 3px; float: left; margin-right: 4px; }
+p>a.job-button { float: none; display: inline-block; margin-left: 5px; }
+a.job-button:hover { text-decoration: none; background-color: #00b8d4; color: white }
+div.jobs hr { margin: 0 0 15px 0; background: #aaa; height: 1px; border: 0; margin-bottom: 8px; }
+div.jobs h2 { margin-bottom: 5px }
+div.jobs p { margin-top: 5px; margin-bottom: 10px; }
+div.jobs.wide { width: 100% }
+div.jobs.wide img { }
+div.job-wide-all { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-justify-content: space-between; -ms-flex-pack: justify; justify-content: space-between; }
+div.job-wide-all>div { -webkit-flex: 0 1 49%; -ms-flex: 0 1 49%; flex: 0 1 49%; }
+div.job-content-buttons { display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column; }
+div.jobs h2 {margin-top:0; color:black;}
+
+@media only screen and (max-width:770px) {
+	div.jobs { width: 100%; min-width: 100% }
+	div.jobs.wide img { width: 100%; max-width: 100%; float: none; }
+	div.details { box-sizing: border-box; padding: 4px }
+	div.job-wide-all { -webkit-flex-direction: column; -ms-flex-direction: column; flex-direction: column }
+}
