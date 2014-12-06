@@ -8,7 +8,7 @@ css: flexbox-cross-browser-insonsistencies
 ---
 {% include JB/setup %}
 
-I'm a big fan of css flexbox; I think I probably overuse it. I think of flexbox first every time I need two divs to be side by side and to be forced to have the same height. It goes without saying why that's not ideal. And even aside from the obvious reasons, it's easy to make the two side-by-side divs become one on top of the other on smaller screen sizes with flexbox; not so easy with tables. Flexbox is perfect for that kind of responsiveness.
+I'm a big fan of css flexbox; I think I probably overuse it. I think of flexbox first every time I need two divs to be side by side and to be forced to have the same height. An alternative solution to that problem is to use tables. It goes without saying why that's not ideal. And even aside from the obvious reasons, it's easy to make the two side-by-side divs become one on top of the other on smaller screen sizes with flexbox; not so easy with tables. Flexbox is perfect for that kind of responsiveness.
 
 ####So, here was my goal:
 
