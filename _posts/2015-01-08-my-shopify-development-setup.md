@@ -57,3 +57,5 @@ I can now easily cherry pick between branches. I can also duplicate a theme on S
 It's possible to create a setup that only pushes changes to Shopify when you commit to git; it waits for you to make a new commit, then does `theme upload {file-name.ext}` for every file you changed in that commit. Or perhaps it can involve a webhook with a GitHub repo. I'm not sure what the best way would be. At first I thought I'd prefer that, but I think I prefer it just updating when I save. That way I don't litter my commit history with changes that are immediately reverted.
 
 So, I've created a Shopify dev setup that I'm mostly happy with. I'm also pleased to announce that this same project has finally pushed me onto the SASS train. Given Shopify's support for .scss files, I've finally decided to take the plunge. And I love it!
+
+<aside class="alert-danger">Make sure if you're committing your shopify_theme config.yml that you're doing so in a private repo.</aside>
