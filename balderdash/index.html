@@ -1,0 +1,63 @@
+---
+layout: plain
+title: "Balderdash"
+description: ""
+css: balderdash
+javascript: balderdash
+---
+{% include JB/setup %}
+
+
+<div id="wrapper">
+    <header>
+        <h1><a href="/">Balderdash</a></h1> <span><label for="words-toggle">Game</label> <label for="rules-toggle">Rules</label></span>
+    </header>
+    <div id="game-wrapper">
+        <input type="radio" checked id="words-toggle" name="word-rules-toggle">
+        <div id="words">
+            <button id="start-game" class="btn btn-primary btn-lg" data-index="0">START GAME</button> 
+            <button id="show-word" class="btn btn-danger btn-lg">SHOW WORD</button>
+            <div id="word-display">
+                <h2 id="word">Word</h2>
+                <div id="definition">
+                    <p class="word-type">part of speech</p>
+                    <p class="def">Definition</p>
+                    <p class="eg">Example of word in use.</p>
+                </div>
+            </div>
+        </div>
+        <input type="radio" id="rules-toggle" name="word-rules-toggle">
+        <div id="rules">
+            <h1>Rules</h1>
+            <p>The game begins by all players rolling a die, with the high roll chosen to be the first "dasher". The dasher draws a "definition card" from the supplied box, and rolls the dice to decide which of the words listed there is to be used. Then the dasher writes the definition of the word (as supplied on the card) on a piece of paper. All other players then write down a definition, which may be an honest attempt to supply the correct definition, or, if they do not know or for tactical reasons decide not to, a fictitious definition for the word designed to sound convincing.</p>
+            <p>The players hand their definitions to the dasher. Players submitting the correct definition are immediately awarded three points, and, if there is more than one, the round is abandoned (though the points are retained). The definitions, including the real definition, are then read out in random order. Players record which answer they believe is correct. Players are awarded two points if they guess the correct definition. Players are awarded one point for each other player who incorrectly chooses the fake definition they wrote. The dasher is awarded three points if no one guesses the correct definition. Players move their tokens around the game board one square for each point awarded. The role of dasher then passes to another player. The winner is the individual whose token reaches the end square first.</p>
+        </div>
+        <div id="players">
+            <h2>Players <button id="add-player" class="btn btn-default">Add Player</button></h2>
+            <div id="player-list">
+                <div class="player">
+                    <div class="name">
+                        <input type="text" value="player1" class="name-input">
+                    </div>
+                    <div class="points">
+                        <input type="text" value="0" class="points-input">
+                    </div>
+                    <div>
+                        <button class="btn btn-warning plus-points" data-value="1">+1</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-warning plus-points" data-value="2">+2</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-warning plus-points" data-value="3">+3</button>
+                    </div>
+                    <div>
+                        <button type="button" class="close">×</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>

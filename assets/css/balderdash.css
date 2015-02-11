@@ -1,0 +1,203 @@
+body, html {
+    margin:0px;
+    height: 100%;
+}
+
+#wrapper {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height:100%;
+    -webkit-flex-direction:column;
+    -ms-flex-direction:column;
+    flex-direction:column;
+}
+
+header {
+    background-color: #888;
+    border-bottom:  solid 1px grey;
+    padding: 0 24px;
+}
+
+header h1 {
+    margin-top: 10px;
+    float: left;
+}
+
+header a {
+    color: white;
+}
+
+header a:hover {
+    color:#eee;
+    text-decoration: none;
+}
+
+header span {
+    line-height: 39px;
+    float: right;
+    margin-top: 10px;
+}
+
+header span label {
+    cursor: pointer;
+    padding-left: 10px;
+}
+
+#game-wrapper {
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    min-height:100%;
+    -webkit-flex-direction:row;
+    -ms-flex-direction:row;
+    flex-direction:row;
+}
+
+#game-wrapper > div {
+    padding: 15px;
+}
+
+div#words, div#rules {
+    -webkit-flex: 1 2 800px;
+        -ms-flex: 1 2 800px;
+            flex: 1 2 800px;
+    border-right: solid 1px grey;
+    display:none;
+}
+
+div#words {
+    text-align: center;
+}
+
+input#words-toggle, input#rules-toggle {
+    display: none;
+}
+
+input:checked + #words, input:checked + #rules {
+    display: block;
+}
+
+button#show-word {
+    display: none;
+    margin: auto;
+    margin-top: 50px;
+}
+
+button#show-word.active {
+    display: block;
+}
+
+button#show-word.active + #word-display {
+    display: none;
+}
+
+h2#word {
+    font-size: 60px;
+    border-bottom: solid 1px grey;
+    margin-top: 10vh;
+    padding-bottom: 2vh;
+}
+
+#definition p, #rules p {
+    font-size: 20px;
+    line-height: 31px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#definition p.eg:before, #definition p.eg:after {
+    content: '"';
+}
+
+#definition p.word-type {
+    font-style: italic;
+    color: grey;
+    margin-bottom: 0;
+}
+
+#rules h1 {
+    padding-bottom: 10px;
+    border-bottom: solid 1px grey;
+    margin-bottom: 20px;
+}
+
+div#players {
+    -webkit-flex: 0 0 450px;
+        -ms-flex: 0 0 450px;
+            flex: 0 0 450px;
+}
+
+#players h2 {
+    color: black;
+    margin-top: 0;
+    border-bottom: solid 1px grey;
+    padding-bottom: 10px;
+}
+
+#player-list {
+    display: table;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.player {
+    display: table-row;
+    border-bottom: solid 1px lightgrey;
+}
+
+.player.active {
+    background-color: #eee;
+}
+
+.player > * {
+    display: table-cell;
+    padding: 10px 0;
+    border-bottom: solid 1px lightgrey;
+}
+
+.player:last-child > * {
+    border: none;
+}
+
+.player input {
+    border: none;
+    background-color: transparent;
+}
+
+.player .name {
+    padding-right: 15px;
+    width: 175px;
+}
+
+.player .name input {
+    text-align: right;
+}
+
+.player .points {
+    padding-right: 15px;
+    width: 75px;
+}
+
+.player .points input {
+    text-align: center;
+}
+
+.player input {
+    width: 100%;
+}
+
+.player button.close {
+    line-height: 13px;
+    margin-left: 12px;
+    margin-right: 12px;
+}
+
+button#add-player {
+    float: right;
+}
+
