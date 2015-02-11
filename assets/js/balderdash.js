@@ -89,4 +89,8 @@ $( document ).ready(function() {
     $('button#show-word').click(function(){
     	$(this).removeClass('active');
     });
+
+    $('body').on('click','.player input', function(){
+    	$(this).select();
+    });
 });
