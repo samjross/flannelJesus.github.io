@@ -103,7 +103,7 @@ h2#word {
     padding-bottom: 2vh;
 }
 
-#definition p, #rules p {
+#definition p, #rules p, #rules ul {
     font-size: 20px;
     line-height: 31px;
     margin-bottom: 15px;
