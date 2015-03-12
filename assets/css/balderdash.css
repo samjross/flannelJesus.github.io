@@ -225,7 +225,7 @@ button#add-player {
         -webkit-flex: 0 0 auto;
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
-        padding: 50px 0;
+        padding: 50px 15px;
         width: 450px;
     }
 }
