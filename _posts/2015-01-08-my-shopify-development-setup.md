@@ -2,8 +2,8 @@
 layout: post
 title: "My Shopify Development Setup - Windows"
 description: ""
-category: 
-tags: []
+category: programming
+tags: [programming, shopify]
 ---
 {% include JB/setup %}
 

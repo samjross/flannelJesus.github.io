@@ -15,14 +15,15 @@ function shuffle(array) {
   }
 
   return array;
-};
+}
 
 function displayWord(wordObj) {
 	$('h2#word').text(wordObj.word);
-	$('#definition .word-type').text(wordObj.wordType);
-	$('#definition .def').text(wordObj.definition);
-	$('#definition .eg').text(wordObj.example);
-};
+    var definition = $('#definition');
+    definition.find('.word-type').text(wordObj.wordType);
+	definition.find('.def').text(wordObj.definition);
+	definition.find('.eg').text(wordObj.example);
+}
 
 function advanceActivePlayer() {
 	var current_player = $('.player.active');
@@ -33,7 +34,7 @@ function advanceActivePlayer() {
 	} else {
 		$('.player').eq(0).addClass('active');
 	}
-};
+}
 
 $( document ).ready(function() {
 
@@ -54,29 +55,33 @@ $( document ).ready(function() {
         $('#player-list').append(newPlayer);
     });
 
-    $('#player-list').on('click','.player button.close', function(){
+    var $playerList = $('#player-list');
+    $playerList.on('click','.player button.close', function(){
         if ($(this).closest('.player').hasClass('active')) {
             advanceActivePlayer();
         }
         $(this).closest('.player').remove();
     });
 
-    $('#player-list').on('click', '.player button.plus-points', function(){
+    $playerList.on('click', '.player button.plus-points', function(){
         var pointsToAdd = parseInt($(this).attr('data-value'));
         var existingPoints = parseInt($(this).closest('.player').find('input.points-input').val());
         var newPointTotal = pointsToAdd + existingPoints;
         $(this).closest('.player').find('input.points-input').val(newPointTotal);
     });
 
-    $('body').on('click', 'button#start-game', function(){
+
+    var $body = $('body');
+    $body.on('click', 'button#start-game', function(){
         $(this).attr('id','next-word');
         $(this).text('NEXT WORD');
-        var player_count = $('.player').length;
+        var $player = $('.player');
+        var player_count = $player.length;
         var active_player = Math.floor((Math.random() * player_count));
-        $('.player').eq(active_player).addClass('active');
+        $player.eq(active_player).addClass('active');
     });
 
-    $('body').on('click', 'button#next-word, button#start-game', function(){
+    $body.on('click', 'button#next-word, button#start-game', function(){
     	var index = parseInt($(this).attr('data-index'));
     	var nextWord = words[index];
     	displayWord(nextWord);
@@ -90,7 +95,7 @@ $( document ).ready(function() {
     	$(this).removeClass('active');
     });
 
-    $('body').on('click','.player input', function(){
+    $body.on('click','.player input', function(){
     	$(this).select();
     });
 });
