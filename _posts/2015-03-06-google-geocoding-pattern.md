@@ -173,6 +173,8 @@ In the block that starts `if (showObjects.length === 0) {`, my first try was to 
 
 I've never seen this pattern of using promises to work through a queue of tasks before, but the simplicity that promises provided at the end there, on lines 43 and 44, really showed me that promises are a bit more than mere sugar; they provide an amazingly intuitive and simple way to deal with certain problems.
 
+___
+
 ## EDIT
 
 The next morning I realized that there's an error with my code - not in practice (it will work in practice probably nearly 100% of the time) but the idea is wrong.
