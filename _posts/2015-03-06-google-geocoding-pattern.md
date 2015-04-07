@@ -172,3 +172,68 @@ After the `showObjects` array is completely emptied, I clear the `geoTimer` inte
 In the block that starts `if (showObjects.length === 0) {`, my first try was to just do `resolve(processedObjects);` right after `clearInterval(geoTimer);` but it kept on only giving me 79 or 78 of my 80 objects I was expecting. I realized that it was calling `resolve` before the final show object had hit the `processedObjects.push(show)` line. Using promises from the beginning really came to the rescue in that situation, as you can see. `gcg` is a promise that resolves after the `push` on line 39 above. When `showObjects.length === 0`, I know I'm on my very last showObject, and so when its results get pushed onto the `processedObjects` array, I'm ready to move onto the next part of my process (which is incidentally just printing to console).
 
 I've never seen this pattern of using promises to work through a queue of tasks before, but the simplicity that promises provided at the end there, on lines 43 and 44, really showed me that promises are a bit more than mere sugar; they provide an amazingly intuitive and simple way to deal with certain problems.
+
+## EDIT
+
+The next morning I realized that there's an error with my code - not in practice (it will work in practice probably nearly 100% of the time) but the idea is wrong.
+
+I called `gcg.then` on the very last gcg Promise and then resolved the containing Promise. That assumes that the last gcg is going to be the last one resolved. But the fact is is we're dealing with asynchronous code, and even though in practice it works out like that the vast majority of the time, I feel a bit icky making that assumption. So, I've changed the code a bit: I now add each `gcg` promise to an array of promises, and then when the full array of promises has been created, I use `Promise.all` and then resolve the containing promise.
+
+{% highlight javascript linenos=table %}
+var csv = require('csv'),
+    fs = require('fs'),
+    Promise = require('promise'),
+    cto = require('csv-to-object'), // this is my own package
+    geoCode = require('geoCode'); // this one too
+
+var read = Promise.denodeify(fs.readFile);
+var write = Promise.denodeify(fs.writeFile);
+
+read('show dates 2015.csv')
+    .then(function (csvStr) {
+        return new Promise(function (resolve, reject) {
+            csv.parse(csvStr, {delimiter: ';'}, function (err, output) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(cto.objectify(output));
+                }
+            });
+        });
+    })
+    .then(function (showObjects) {
+        return new Promise(function (resolve, reject) {
+            var processedObjects = [];
+            var waitingFor = [];
+            var geoTimer = setInterval(function () {
+                var show = showObjects.shift();
+                var query = show.Address + ' ' + show['Post Code'];
+                var gcg = geoCode.get(query)
+                    .then(function (response) {
+                        var location = response.results[0].geometry.location;
+                        show.lat = location.lat;
+                        show.lng = location.lng;
+                    })
+                    .catch(function () {
+                        show.lat = 'error';
+                        show.lng = 'error';
+                    })
+                    .then(function () {
+                        processedObjects.push(show);
+                    });
+                waitingFor.push(gcg);
+                if (showObjects.length === 0) {
+                    clearInterval(geoTimer);
+                    Promise.all(waitingFor)
+                        .then(function(){
+                            resolve(processedObjects);
+                        });
+                }
+            }, 201);
+        });
+
+    })
+    .then(function (objs) {
+        console.log(objs);
+    });
+{% endhighlight %}
