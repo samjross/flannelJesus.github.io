@@ -6,6 +6,8 @@ category: programming
 tags: [javascript, js, web, shopify, programming]
 ---
 
+<aside>Before I get into this post, I should mention that the finished product is available in the <a href="/programming/2015-05-17/shopify-301-bookmarklet">following post</a> as a bookmarklet</aside>
+
 ## The Problem
 
 Before launching our new site, we had to make sure that the most important urls on our old site had 301s, so that visitors coming to our site from outdated links wouldn't just always end up on our 404 page. The problem was that we had around 500 URLs to redirect.
