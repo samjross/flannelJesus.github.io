@@ -94,7 +94,7 @@
                     redirects.forEach(function (element, index, array) {
                         result += `${element.path} ${element.target}\n`
                     });
-                    $('.bulk_redirects textarea#redirect_path').text(result);
+                    $('.bulk_redirects textarea#redirect_path').val(result);
                     cb(redirects);
                 });
             };
