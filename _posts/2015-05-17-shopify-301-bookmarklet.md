@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "301 Bulk Utilities"
-description: ""
+title: "Shopify 301 Utilities"
+description: "A bookmarklet to help people upload and back up their 301s in bulk"
 category: programming
 tags: [javascript, js, web, shopify, programming]
 ---
