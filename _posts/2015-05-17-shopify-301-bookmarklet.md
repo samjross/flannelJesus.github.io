@@ -14,3 +14,5 @@ The input area accepts either space-delimitted or tab-delimitted redirects. The 
 Here's what the UI looks like:
 
 ![shopify 301 ]({{ site.url }}/assets/images/301_UI_screenshot.jpg)
+
+The source code is [here](https://flanneljesus.github.io/assets/js/301_bookmarklet.js).
