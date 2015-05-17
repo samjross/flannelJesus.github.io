@@ -2,8 +2,7 @@
 layout: post
 title: "Shopify 301 Utilities"
 description: "A bookmarklet to help people upload and back up their 301s in bulk"
-category: programming
-tags: [javascript, js, web, shopify, programming]
+tags: [shopify]
 ---
 
 Import, export and delete 301s in bulk on Shopify. Drag the link below to your bookmarks area. To use, go to your Shopify Admin area and click the bookmark.
