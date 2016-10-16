@@ -1,0 +1,67 @@
+.rankings-wrapper {
+	width: 100%;
+	overflow-x: scroll;
+}
+
+.rankings-wrapper > div {
+	width: 1000px;
+}
+
+.rankings-wrapper ul {
+	width:200px;
+	float: left;
+	list-style: none;
+	padding: 0 20px 0 0;
+}
+
+.rankings-wrapper li {
+	background: grey;
+	color: white;
+	padding: 5px 20px;
+	cursor: pointer;
+}
+
+.rankings-wrapper li:hover {
+	background: #777;
+}
+
+.rankings-wrapper li.active {
+	background: #666666; /* Old browsers */
+	background: -moz-linear-gradient(left, #666666 0%, #808080 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #666666 0%,#808080 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #666666 0%,#808080 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.rankings-wrapper li.play i {
+	margin-left: 10px;
+}
+
+.rankings-wrapper li.play.playing {
+	background: #4d754d;
+	border-color: #3d5f3d;
+}
+
+.rankings-wrapper li.play {
+	border-bottom: solid 2px #555;
+	background: #6d6d6d;
+}
+
+svg {
+	width: 800px;
+	float: left;
+}
+
+text {
+	font-size: .05em;
+	font-family: sans-serif;
+	fill: #666;
+}
+
+text.teamName {
+	font-size: .07em;
+	fill: black;
+}
+
+line {
+	opacity: 0.8;
+}
