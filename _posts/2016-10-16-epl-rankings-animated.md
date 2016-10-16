@@ -8,6 +8,8 @@ css: epl-rankings-s4
 javascript: epl-rankings-s4
 ---
 
+These graphs below are essentially "high-low" charts. The top of each line is the *maximum* the team could win (if they won every game from that point in time until the end of the tournament). The bottom is the *minimum* (if they lost every game in the future), and the circle is their *expected wins*, calculated based solely on the assumption that they'll keep on winning at the same rate they have won already.s
+
 <div class="rankings-wrapper" id="eu">
 	<h3>EU EPL Rankings</h3>
 	<div>
