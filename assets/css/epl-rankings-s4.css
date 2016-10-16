@@ -1,6 +1,7 @@
 .rankings-wrapper {
 	width: 100%;
 	overflow-x: scroll;
+	margin-bottom: 20px;
 }
 
 .rankings-wrapper > div {

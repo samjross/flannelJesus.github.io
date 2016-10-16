@@ -823,3 +823,6 @@ javascript: epl-rankings-s4
 	</div>
 </div>
 
+All data provided by [liquipedia](http://wiki.teamliquid.net/counterstrike/ESL_ESEA/Pro_League/Season/IV/Europe)
+
+I learned how to animate SVG from scratch to make this animation. I plan on posting next about some of the things I learned while doing that, because I think I put this all together in a unique and pretty sane way, using techniques other data animators might like.
